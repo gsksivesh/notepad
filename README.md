@@ -1,2 +1,0 @@
-# notepad.github.io
-Notepad
