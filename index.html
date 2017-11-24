@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html style="background-color:#9fd6ff; padding: 20px; font-size: 20px; color: #0051ff;white-space: pre;"
+      contenteditable>
+
+<script>
+    window.onload = function () {
+        var bodyElement = document.getElementsByTagName('body')[0];
+        bodyElement.innerHTML = localStorage.getItem('notepad');
+        bodyElement.addEventListener('input', function () {
+            setTimeout(function () {
+                localStorage.setItem('notepad', bodyElement.innerHTML);
+            }, 500);
+        });
+        console.log(bodyElement.innerHTML);
+    }
+</script>
+
+</html>
