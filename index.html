@@ -18,6 +18,9 @@
 <body contenteditable>
 
 <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
     window.onload = function () {
         var bodyElement = document.getElementsByTagName('body')[0];
         var localStorageContent = localStorage.getItem('notepad');
