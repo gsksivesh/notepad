@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html style="background-color:#9fd6ff; padding: 20px; font-size: 20px; color: #0051ff;white-space: pre;"
-      contenteditable>
-      <head>
-            <title>Notepad</title>
-      </head>
+<html>
+<head>
+    <title>Notepad</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/>
+    <style>
+        body {
+            background-color: #9fd6ff;
+            padding: 20px;
+            font-size: 20px;
+            color: #0051ff;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body contenteditable>
+
 <script>
     window.onload = function () {
         var bodyElement = document.getElementsByTagName('body')[0];
-        bodyElement.innerHTML = localStorage.getItem('notepad');
+        var localStorageContent = localStorage.getItem('notepad');
+        bodyElement.innerHTML = localStorageContent === null ? "" : localStorageContent;
         bodyElement.addEventListener('input', function () {
             setTimeout(function () {
                 localStorage.setItem('notepad', bodyElement.innerHTML);
@@ -16,5 +28,6 @@
         console.log(bodyElement.innerHTML);
     }
 </script>
+</body>
 
 </html>
