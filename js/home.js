@@ -14,5 +14,4 @@ window.onload = function () {
             localStorage.setItem('notepad', bodyElement.innerHTML);
         }, 500);
     });
-    console.log(bodyElement.innerHTML);
 };
