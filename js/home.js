@@ -5,13 +5,14 @@ if ('serviceWorker' in navigator) {
 window.onload = function () {
     let bodyElement = document.getElementsByTagName('body')[0];
     let localStorageContent = localStorage.getItem('notepad');
-    bodyElement.innerHTML = localStorageContent === null ? "" : localStorageContent;
+    let notepadElement = document.getElementById('notepad_div');
+    notepadElement.innerHTML = localStorageContent === null ? "" : localStorageContent;
 
     bodyElement.addEventListener('input', function () {
         // Avoid saving to local storage on every input key if they type very fast
         // The function will execute after 500 milli seconds
         setTimeout(function () {
-            localStorage.setItem('notepad', bodyElement.innerHTML);
+            localStorage.setItem('notepad', notepadElement.innerHTML);
         }, 500);
     });
 };
