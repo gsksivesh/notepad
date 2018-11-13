@@ -19,7 +19,7 @@ body {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    position: absolute;
+    position: fixed;
     animation: spin 2s linear infinite;
     bottom: 30px;
     right: 30px;
