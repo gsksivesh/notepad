@@ -9,6 +9,28 @@ body {
     color: #0051ff;
 }
 #notepad_div{
-    min-height: 100%;
+    min-height: 93%;
     padding: 30px;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    animation: spin 2s linear infinite;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hide {
+    display: none;
 }

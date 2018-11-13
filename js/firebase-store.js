@@ -55,16 +55,21 @@ const firebaseSync = (uid) => {
         console.log("Error getting document:", error);
     });
     let timer = false;
+    let loaderElement = document.getElementsByClassName('loader')[0];
     bodyElement.addEventListener('input', function () {
         // Avoid saving to firebase storage on every input key if they type very fast
         // The function will execute after 1500 milli seconds
         clearTimeout(timer);
 
+        // show loader
+        loaderElement.style.display = 'block';
         timer = setTimeout(function () {
             if (firebaseAuthEnabled) {
                 userWriteDB(uid, notepadElement.innerHTML);
+                // hide loader
+                loaderElement.style.display = 'none';
             }
-        }, 1500);
+        }, 3000);
 
     });
 };
