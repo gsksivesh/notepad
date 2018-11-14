@@ -9,9 +9,9 @@ body {
     color: #0051ff;
 }
 #notepad_div{
-    height: -moz-calc(100% - (30px + 30px));
-    height: -webkit-calc(100% - (30px + 30px));
-    height: calc(100% - (30px + 30px));
+    min-height: -moz-calc(100% - (30px + 30px));
+    min-height: -webkit-calc(100% - (30px + 30px));
+    min-height: calc(100% - (30px + 30px));
     padding: 30px;
 }
 
