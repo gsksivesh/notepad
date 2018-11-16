@@ -14,3 +14,16 @@ const localDatabase = () => {
 
     });
 };
+
+function changeColor(backgroundColor, textColor) {
+    document.getElementById("body").style["background-color"] = backgroundColor;
+    document.getElementById("body").style["color"] = textColor;
+    localStorage.setItem('backgroundColor', backgroundColor);
+    localStorage.setItem('textColor', textColor);
+}
+
+// Getting Background Colors
+const bgcolor = localStorage.getItem('backgroundColor');
+const color = localStorage.getItem('textColor');
+if (bgcolor) document.getElementById("body").style["background-color"] = bgcolor;
+if (color) document.getElementById("body").style["color"] = color;
