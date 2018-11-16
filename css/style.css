@@ -69,3 +69,9 @@ body {
     top: 200px;
     background-color: #555;
 }
+
+#skyblue {
+    background-color: #9fd6ff;
+    top: 260px;
+    border: 1px solid;
+}
