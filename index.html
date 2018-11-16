@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Notepad</title>
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<div class="loader" style="display: none"></div>
-<div id="notepad_div" contenteditable="true">
 
-</div>
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script src="js/init.js"></script>
-<script src="js/firebase-store.js"></script>
-<script src="js/home.js"></script>
+<body id="body">
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="green" onclick="changeColor('#4CAF50','#ffffff')"></a>
+        <a href="#" id="blue" onclick="changeColor('#2196F3','#ffffff')"></a>
+        <a href="#" id="red" onclick="changeColor('#f44336','#ffffff')"></a>
+        <a href="#" id="black" onclick="changeColor('#555','#ffffff')"></a>
+    </div>
+
+    <div class="loader" style="display: none"></div>
+    <div id="notepad_div" contenteditable="true">
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/firebase-store.js"></script>
+    <script src="js/home.js"></script>
 </body>
+
 </html>

@@ -13,6 +13,7 @@ body {
     min-height: -webkit-calc(100% - (30px + 30px));
     min-height: calc(100% - (30px + 30px));
     padding: 30px;
+    padding-left: 60px;
 }
 
 .loader {
@@ -31,4 +32,40 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#green {
+    border: 1px solid;
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+#blue {
+    border: 1px solid;
+    top: 80px;
+    background-color: #2196F3;
+}
+
+#red {
+    border: 1px solid;
+    top: 140px;
+    background-color: #f44336;
+}
+
+#black {
+    border: 1px solid;
+    top: 200px;
+    background-color: #555;
 }
